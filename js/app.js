@@ -1,1 +1,1 @@
-angular.module("Jeviteca", []);
+angular.module("Jeviteca", [])
