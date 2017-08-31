@@ -1,0 +1,12 @@
+.main{
+    margin-top: 2rem;
+}
+
+.albums{
+    margin-bottom: 2rem;
+}
+
+.albums .card-body{
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}

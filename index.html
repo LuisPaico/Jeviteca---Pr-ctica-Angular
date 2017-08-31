@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jeviteca</title>
+    <title>Jeviteca 🤘🏼</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-route-segment/1.4.0/angular-route-segment.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/controllers/AlbumsController.js"></script>
+    <script src="/js/services/AlbumsProvider.js"></script>
+    <script src="/js/controllers/AlbumsController.js"></script>
+    <script src="/js/components/AlbumList.js"></script>
+    <script src="/js/controllers/BandsController.js"></script>
+    <script src="/js/services/BandsProvider.js"></script>
+    <script src="/js/controllers/BandsController.js"></script>
+    <script src="/js/components/BandList.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -17,34 +28,46 @@
         </button>
         
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+            <ul class="nav navbar-nav mr-auto" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" href="#home" role="tab" data-toggle="tab">Inicio <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Álbumes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Bandas</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Géneros</a>
+                    <a class="nav-link" href="#albumes" role="tab" data-toggle="tab">Álbumes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#bandas" role="tab" data-toggle="tab">Bandas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#generos" role="tab" data-toggle="tab">Géneros</a>
             </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
+            <!-- <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            </form> -->
         </div>
     </nav>
-
+<div class="main">
     <div class="container">
         <div class="row">
-            <div ng-view class="col">
-                1 of 1
+            <div  class="col">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
+                    <div class="tab-pane fade" id="albumes" role="tabpanel" aria-labelledby="nav-albumes-tab">
+                        <albums-list></albums-list>
+                    </div>
+                    <div class="tab-pane fade" id="bandas" role="tabpanel" aria-labelledby="nav-bandas-tab">
+                        <bands-list></bands-list>
+                    </div>
+                    <div class="tab-pane fade" id="generos" role="tabpanel" aria-labelledby="nav-generos-tab">
+                        <genres-list></genres-list>
+                    </div>
+                  </div>
             </div>
         </div>
     </div>
+</div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>

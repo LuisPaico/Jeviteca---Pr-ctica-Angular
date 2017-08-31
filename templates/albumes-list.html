@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="albums-list">
+        <div class="alert alert-info" ng-show="$ctrl.uiStatus == 'loading'">Cargando Álbumes...</div>
+        <div class="alert alert-danger" ng-show="$ctrl.uiStatus == 'error'">Se ha producido un error</div>
+        <div class="alert alert-warning" ng-show="$ctrl.uiStatus == 'empty'">No hay ningun álbum</div>
+
+        <div ng-show="$ctrl.uiStatus == 'ideal'">
+            <h1>Álbumes</h1>
+
+            <div class="card-deck row">
+                <div class="albums col-md-4" ng-repeat="album in $ctrl.model">
+                    <img class="card-img-top" src="/resources/img/{{album.image}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ album.band.name }} - {{ album.title }}</h4>
+                        <ol>
+                            <li ng-repeat="track in album.tracklist">{{ track }}</li>
+                        </ol>
+                        <p class="card-text d-flex justify-content-between">
+                            <small class="text-muted">Genero: {{ album.genre.name }}</small>
+                            <small class="text-muted">Año: {{ album.year }}</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
