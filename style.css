@@ -2,11 +2,23 @@
     margin-top: 2rem;
 }
 
-.albums{
+.albums, .bands, .genres{
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .albums .card-body{
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.bands .card-body{
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.genres .card-body{
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
 }

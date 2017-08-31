@@ -19,6 +19,10 @@
     <script src="/js/services/BandsProvider.js"></script>
     <script src="/js/controllers/BandsController.js"></script>
     <script src="/js/components/BandList.js"></script>
+    <script src="/js/controllers/GenresController.js"></script>
+    <script src="/js/services/GenresProvider.js"></script>
+    <script src="/js/controllers/GenresController.js"></script>
+    <script src="/js/components/GenreList.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -29,11 +33,11 @@
         
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav navbar-nav mr-auto" role="tablist">
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link active" href="#home" role="tab" data-toggle="tab">Inicio <span class="sr-only">(current)</span></a>
-            </li>
+            </li> -->
             <li class="nav-item">
-                    <a class="nav-link" href="#albumes" role="tab" data-toggle="tab">Álbumes</a>
+                    <a class="nav-link active" href="#albumes" role="tab" data-toggle="tab">Álbumes</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#bandas" role="tab" data-toggle="tab">Bandas</a>
@@ -53,8 +57,8 @@
         <div class="row">
             <div  class="col">
                 <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
-                    <div class="tab-pane fade" id="albumes" role="tabpanel" aria-labelledby="nav-albumes-tab">
+                    <!-- <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="nav-home-tab">...</div> -->
+                    <div class="tab-pane fade show active" id="albumes" role="tabpanel" aria-labelledby="nav-albumes-tab">
                         <albums-list></albums-list>
                     </div>
                     <div class="tab-pane fade" id="bandas" role="tabpanel" aria-labelledby="nav-bandas-tab">
